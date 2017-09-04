@@ -7,7 +7,8 @@
     "bundle": "node node_modules/react-vr/scripts/bundle.js",
     "open": "node -e \"require('xopen')('http://localhost:8081/vr/')\"",
     "devtools": "react-devtools",
-    "test": "jest"
+    "test": "jest",
+    "build": "npm run bundle && mv vr/build/ . && cp index.html build/ && cp -R static_assets/ build/"
   },
   "dependencies": {
     "ovrui": "~1.4.0",
